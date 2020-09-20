@@ -31,6 +31,7 @@ let _Vue;
 export default {
   // 开发一个插件需提供install方法
   install(Vue, options) {
+    // 避免重复use
     if (!_Vue) {
       _Vue = Vue
       Vue.prototype.$message = Message
